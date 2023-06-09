@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "647f3d2a70b47d535c175546"
+  },
+  "gender": "Male"
+},
+{
+  "_id": {
+    "$oid": "647f3d2a70b47d535c175547"
+  },
+  "gender": "Female"
+},
+{
+  "_id": {
+    "$oid": "647f3d2a70b47d535c175548"
+  },
+  "gender": "Other"
+}]

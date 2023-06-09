@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a3"
+  },
+  "zodiacSign": "Aries"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a4"
+  },
+  "zodiacSign": "Taurus"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a5"
+  },
+  "zodiacSign": "Gemini"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a6"
+  },
+  "zodiacSign": "Cancer"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a7"
+  },
+  "zodiacSign": "Leo"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a8"
+  },
+  "zodiacSign": "Virgo"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755a9"
+  },
+  "zodiacSign": "Libra"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755aa"
+  },
+  "zodiacSign": "Scorpio"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755ab"
+  },
+  "zodiacSign": "Sagittarius"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755ac"
+  },
+  "zodiacSign": "Capricorn"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755ad"
+  },
+  "zodiacSign": "Aquarius"
+},
+{
+  "_id": {
+    "$oid": "647f495670b47d535c1755ae"
+  },
+  "zodiacSign": "Pisces"
+}]

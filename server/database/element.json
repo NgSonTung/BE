@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "647f3c6770b47d535c175518"
+  },
+  "element": "Metal"
+},
+{
+  "_id": {
+    "$oid": "647f3c6770b47d535c175519"
+  },
+  "element": "Wood"
+},
+{
+  "_id": {
+    "$oid": "647f3c6770b47d535c17551a"
+  },
+  "element": "Water"
+},
+{
+  "_id": {
+    "$oid": "647f3c6770b47d535c17551b"
+  },
+  "element": "Fire"
+},
+{
+  "_id": {
+    "$oid": "647f3c6770b47d535c17551c"
+  },
+  "element": "Earth"
+}]

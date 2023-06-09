@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "647f454f70b47d535c175583"
+  },
+  "type": "Baby Names"
+},
+{
+  "_id": {
+    "$oid": "647f454f70b47d535c175584"
+  },
+  "type": "Pet Names"
+},
+{
+  "_id": {
+    "$oid": "647f454f70b47d535c175585"
+  },
+  "type": "Business Names"
+},
+{
+  "_id": {
+    "$oid": "647f454f70b47d535c175586"
+  },
+  "type": "Character Names"
+}]

@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "647f3d4870b47d535c175555"
+  },
+  "meaning": "Strong"
+},
+{
+  "_id": {
+    "$oid": "647f3d4870b47d535c175556"
+  },
+  "meaning": "Wise"
+},
+{
+  "_id": {
+    "$oid": "647f3d4870b47d535c175557"
+  },
+  "meaning": "Pure"
+},
+{
+  "_id": {
+    "$oid": "647f3d4870b47d535c175558"
+  },
+  "meaning": "King"
+}]

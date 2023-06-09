@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "647f3c7270b47d535c17551e"
+  },
+  "ethnicity": "Vietnam"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c17551f"
+  },
+  "ethnicity": "Chinese"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175520"
+  },
+  "ethnicity": "Indian"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175521"
+  },
+  "ethnicity": "Arab"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175522"
+  },
+  "ethnicity": "African"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175523"
+  },
+  "ethnicity": "European"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175524"
+  },
+  "ethnicity": "Native American"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175525"
+  },
+  "ethnicity": "Pacific Islander"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175526"
+  },
+  "ethnicity": "Jewish"
+},
+{
+  "_id": {
+    "$oid": "647f3c7270b47d535c175527"
+  },
+  "ethnicity": "Korean"
+}]
