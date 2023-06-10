@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IZodiacAnimal {
+export interface IZodiacAnimal {
   zodiacAnimal: string;
   typeId: [Types.ObjectId];
 }

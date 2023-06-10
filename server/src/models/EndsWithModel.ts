@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IEndsWith {
+export interface IEndsWith {
   endsWith: string;
   typeId: [Types.ObjectId];
 }

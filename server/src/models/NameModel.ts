@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IName {
+export interface IName {
   name: string;
   createdAt: Date;
   description: string;
@@ -146,6 +146,4 @@ const nameSchema = new Schema<IName>(
   { collection: "name" }
 );
 
-const Name = model("name", nameSchema);
-
-module.exports = Name;
+export const Name = model("name", nameSchema);

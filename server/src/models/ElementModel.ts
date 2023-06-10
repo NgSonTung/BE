@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IElement {
+export interface IElement {
   element: string;
   typeId: [Types.ObjectId];
 }

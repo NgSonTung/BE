@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IWordCount {
+export interface IWordCount {
   wordCount: string;
   typeId: [Types.ObjectId];
 }

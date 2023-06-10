@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IStartsWith {
+export interface IStartsWith {
   startsWith: string;
   typeId: [Types.ObjectId];
 }

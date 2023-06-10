@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IMeaning {
+export interface IMeaning {
   meaning: string;
   typeId: [Types.ObjectId];
 }

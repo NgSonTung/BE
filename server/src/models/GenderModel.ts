@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IGender {
+export interface IGender {
   gender: string;
   typeId: [Types.ObjectId];
 }

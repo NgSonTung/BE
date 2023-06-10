@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IZodiacSign {
+export interface IZodiacSign {
   zodiacSign: string;
   typeId: [Types.ObjectId];
 }

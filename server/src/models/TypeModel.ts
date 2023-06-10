@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-interface IType {
+export interface IType {
   type: string;
 }
 

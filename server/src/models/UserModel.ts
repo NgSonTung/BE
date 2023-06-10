@@ -1,8 +1,12 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IUser {
+export interface IUser {
   userName: string;
-  password: string;
+  authentication: {
+    password: string;
+    salt: string;
+    sessionToken: string;
+  };
   email: string;
   token: Number;
 }
@@ -10,7 +14,24 @@ interface IUser {
 const userSchema = new Schema<IUser>(
   {
     userName: { type: String, required: true },
-    password: { type: String, required: true },
+    authentication: {
+      type: {
+        password: {
+          type: String,
+          required: true,
+          select: false,
+        },
+        salt: {
+          type: String,
+          select: false,
+        },
+        sessionToken: {
+          type: String,
+          select: false,
+        },
+      },
+      required: true,
+    },
     email: {
       type: String,
       required: true,

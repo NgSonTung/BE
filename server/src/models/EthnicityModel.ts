@@ -1,6 +1,6 @@
 import { Schema, Types, model } from "mongoose";
 
-interface IEthnicity {
+export interface IEthnicity {
   ethnicity: string;
   typeId: [Types.ObjectId];
 }
