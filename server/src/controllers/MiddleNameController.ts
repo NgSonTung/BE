@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { MiddleName, IMiddleName } from "../models/MiddleNameModel";
+import { MiddleName, IMiddleName } from "../models/middleNameModel";
 import mongoose from "mongoose";
 
 export const getAllMiddleNames = async (req: Request, res: Response) => {

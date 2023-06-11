@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { FirstName, IFirstName } from "../models/FirstNameModel";
+import { FirstName, IFirstName } from "../models/firstNameModel";
 import mongoose from "mongoose";
 
 export const getAllFirstNames = async (req: Request, res: Response) => {

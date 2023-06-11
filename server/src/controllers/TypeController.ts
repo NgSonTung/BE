@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Type, IType } from "../models/TypeModel";
+import { Type, IType } from "../models/typeModel";
 import mongoose from "mongoose";
 
 export const getAllTypes = async (req: Request, res: Response) => {

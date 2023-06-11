@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Element, IElement } from "../models/ElementModel";
+import { Element, IElement } from "../models/elementModel";
 import mongoose from "mongoose";
 
 export const getAllElements = async (req: Request, res: Response) => {

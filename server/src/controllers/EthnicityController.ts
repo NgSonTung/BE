@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Ethnicity, IEthnicity } from "../models/EthnicityModel";
+import { Ethnicity, IEthnicity } from "../models/ethnicityModel";
 import mongoose from "mongoose";
 
 export const getAllEthnicities = async (req: Request, res: Response) => {

@@ -2,7 +2,7 @@ import express, { Application } from "express";
 import cors from "cors";
 import cookiepParser from "cookie-parser";
 import compression from "compression";
-import authRouter from "./routes/authentication";
+import router from "./routes/";
 // import nameRouter from "./routes/name";
 // import typeRouter from "./routes/type";
 // import categoryRouter from "./routes/category";
@@ -26,7 +26,7 @@ export default class App {
   constructor() {
     this.app = express();
     this.#config();
-    this.#routes();
+    this.app.use("/api/v1/", router);
   }
 
   #config(): void {
@@ -34,24 +34,5 @@ export default class App {
     this.app.use(cookiepParser());
     this.app.use(cors({ credentials: true }));
     this.app.use(express.json());
-  }
-  #routes(): void {
-    this.app.use("/api/v1/auth", authRouter);
-    // this.app.use("/api/v1/name", nameRouter);
-    // this.app.use("/api/v1/type", typeRouter);
-    // this.app.use("/api/v1/category", categoryRouter);
-    // this.app.use("/api/v1/gender", genderRouter);
-    // this.app.use("/api/v1/firstName", firstNameRouter);
-    // this.app.use("/api/v1/middleName", middleNameRouter);
-    // this.app.use("/api/v1/lastName", lastNameRouter);
-    // this.app.use("/api/v1/wordCount", wordCountRouter);
-    // this.app.use("/api/v1/ethnicity", ethnicityRouter);
-    // this.app.use("/api/v1/meaning", meaningRouter);
-    // this.app.use("/api/v1/user", userRouter);
-    // this.app.use("/api/v1/zodiacSign", zodiacSignRouter);
-    // this.app.use("/api/v1/zodiacAnimal", zodiacAnimalRouter);
-    // this.app.use("/api/v1/element", elementRouter);
-    // this.app.use("/api/v1/startsWith", startsWithRouter);
-    // this.app.use("/api/v1/endsWith", endsWithRouter);
   }
 }

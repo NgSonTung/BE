@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { User } from "../models/UserModel";
+import { User } from "../models/userModel";
 import { random, authentication } from "../helpers";
 
 export const login = async (req: Request, res: Response) => {
@@ -42,13 +42,13 @@ export const login = async (req: Request, res: Response) => {
       .status(201)
       .json({
         code: 201,
-        msg: "Logged in successfully!",
+        msg: "Logged in successfully.",
         data: user,
       });
   } catch (e: any) {
     res.status(500).json({
       code: 500,
-      msg: "Failed to login!",
+      msg: "Failed to login.",
       error: e?.message,
     });
   }
@@ -68,7 +68,7 @@ export const register = async (req: Request, res: Response) => {
     if (existingUser) {
       return res
         .status(400)
-        .json({ code: 400, msg: "Email or username taken!" });
+        .json({ code: 400, msg: "Email or username taken." });
     }
 
     const salt = random();
@@ -80,13 +80,13 @@ export const register = async (req: Request, res: Response) => {
 
     return res.status(201).json({
       code: 201,
-      msg: "Registered successfully!",
+      msg: "Registered successfully.",
       data: user,
     });
   } catch (e: any) {
     res.status(500).json({
       code: 500,
-      msg: "Failed to register!",
+      msg: "Failed to register.",
       error: e?.message,
     });
   }

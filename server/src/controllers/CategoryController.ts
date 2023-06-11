@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Category, ICategory } from "../models/CategoryModel";
+import { Category, ICategory } from "../models/categoryModel";
 import mongoose from "mongoose";
 
 export const getAllCategories = async (req: Request, res: Response) => {

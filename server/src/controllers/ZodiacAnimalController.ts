@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { ZodiacAnimal, IZodiacAnimal } from "../models/ZodiacAnimalModel";
+import { ZodiacAnimal, IZodiacAnimal } from "../models/zodiacAnimalModel";
 import mongoose from "mongoose";
 
 export const getAllZodiacAnimals = async (req: Request, res: Response) => {

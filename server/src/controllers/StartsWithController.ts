@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { StartsWith, IStartsWith } from "../models/StartsWithModel";
+import { StartsWith, IStartsWith } from "../models/startsWithModel";
 import mongoose from "mongoose";
 
 export const getAllStartsWiths = async (req: Request, res: Response) => {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Gender, IGender } from "../models/GenderModel";
+import { Gender, IGender } from "../models/genderModel";
 import mongoose from "mongoose";
 
 export const getAllGenders = async (req: Request, res: Response) => {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { EndsWith, IEndsWith } from "../models/EndsWithModel";
+import { EndsWith, IEndsWith } from "../models/endsWithModel";
 import mongoose from "mongoose";
 
 export const getAllEndsWiths = async (req: Request, res: Response) => {

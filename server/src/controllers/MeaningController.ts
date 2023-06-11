@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { Meaning, IMeaning } from "../models/MeaningModel";
+import { Meaning, IMeaning } from "../models/meaningModel";
 import mongoose from "mongoose";
 
 export const getAllMeanings = async (req: Request, res: Response) => {

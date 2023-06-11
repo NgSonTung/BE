@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { WordCount, IWordCount } from "../models/WordCountModel";
+import { WordCount, IWordCount } from "../models/wordCountModel";
 import mongoose from "mongoose";
 
 export const getAllWordCounts = async (req: Request, res: Response) => {
