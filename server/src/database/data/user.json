@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "648477eb03b8f070f7a7408a"
+    },
+    "userName": "user",
+    "authentication": {
+      "password": "40c21b6cda426e042d700885b670a68813cfe07d05caf3575d505166ef4b7413",
+      "salt": "F4NzG3mTRSY/MiaJ0CLYTc9I/7Hjkb6Fv+LGLf8Z/7/eFI812ZFKnz9YKkwjxvsDQw50eqiKsqcSU4rBT91WYFCg7vJ9jGH25U94ZVybgStEhGqaKC7+XM1hScCU41r2H1UFh0TXgTubyhj3vVmq954ngJYsE3Hjj/QRwBLZZxQ="
+    },
+    "email": "user@neoprototype.ca",
+    "token": 0,
+    "role": "0",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6485c367a2c8d063be1436cd"
+    },
+    "userName": "admin",
+    "authentication": {
+      "password": "789ed63910355bd4c9a3dee95303eee9c7e7f9288eaed29df2546413b2c6bd26",
+      "salt": "FEnnznjdQNxNk8NwAOB2gPGJOZfKvJ+sMm3m8/HUoBZJudiR9H5JlxDolbrBNs8664sHDr5iMerfkZ5Rl33BN6Whz6hL4ATOskn9GZB2BLNw6/3XGM6qB3gdCtMKGKMihYq0dHtwotE1pnu0Sv1hEqRHF8XTAjRJH6v9cqCUH18="
+    },
+    "email": "admin@neoprototype.ca",
+    "token": 0,
+    "role": 1,
+    "__v": 0
+  }
+]

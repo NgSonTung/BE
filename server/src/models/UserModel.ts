@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 export interface IUser {
   userName: string;
@@ -9,6 +9,7 @@ export interface IUser {
   };
   email: string;
   token: Number;
+  role: Number;
 }
 
 const userSchema = new Schema<IUser>(
@@ -41,7 +42,8 @@ const userSchema = new Schema<IUser>(
         message: "invalid email!",
       },
     },
-    token: { type: Number, required: true, default: 0 },
+    token: { type: Number, default: 0 },
+    role: { type: Number, default: 0 }, //0: user, 1: admin
   },
   { collection: "user" }
 );

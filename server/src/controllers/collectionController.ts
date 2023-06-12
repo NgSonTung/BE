@@ -3,7 +3,9 @@ import { connection } from "mongoose";
 
 export const getAllCollections = async (req: Request, res: Response) => {
   try {
-    const collections = await connection.db.listCollections().toArray();
+    const collections = await connection.db
+      .listCollections({}, { nameOnly: true })
+      .toArray();
     return res.status(200).json({
       code: 200,
       msg: "Collections retrieved successfully.",
