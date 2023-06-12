@@ -10,9 +10,9 @@ export const login = async (req: Request, res: Response) => {
     }
 
     //incorrect username
-    const user = await User.findOne({ userName: userName }).select(
-      "+authentication.salt + authentication.password"
-    );
+    const user = await User.getModel()
+      .findOne({ userName: userName })
+      .select("+authentication.salt + authentication.password");
     if (!user) {
       return res
         .status(401)
@@ -62,7 +62,7 @@ export const register = async (req: Request, res: Response) => {
       return res.status(400).json({ code: 400, msg: "Invalid credentials" });
     }
 
-    const existingUser = await User.findOne({
+    const existingUser = await User.getModel().findOne({
       $or: [{ userName: userName }, { email: email }],
     });
     if (existingUser) {
@@ -72,10 +72,50 @@ export const register = async (req: Request, res: Response) => {
     }
 
     const salt = random();
-    const user = await User.create({
+    const user = await User.getModel().create({
       userName: userName,
       email: email,
       authentication: { password: authentication(salt, password), salt: salt },
+    });
+
+    return res.status(201).json({
+      code: 201,
+      msg: "Registered successfully.",
+      data: user,
+    });
+  } catch (e: any) {
+    res.status(500).json({
+      code: 500,
+      msg: "Failed to register.",
+      error: e?.message,
+    });
+  }
+};
+
+export const createUser = async (req: Request, res: Response) => {
+  try {
+    const { email, userName, password, token, role } = req.body;
+
+    if (!userName || !password || !email) {
+      return res.status(400).json({ code: 400, msg: "Invalid credentials" });
+    }
+
+    const existingUser = await User.getModel().findOne({
+      $or: [{ userName: userName }, { email: email }],
+    });
+    if (existingUser) {
+      return res
+        .status(400)
+        .json({ code: 400, msg: "Email or username taken." });
+    }
+
+    const salt = random();
+    const user = await User.getModel().create({
+      userName: userName,
+      email: email,
+      authentication: { password: authentication(salt, password), salt: salt },
+      token: token,
+      role: role,
     });
 
     return res.status(201).json({

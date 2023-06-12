@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Schema, Types, model, Model } from "mongoose";
 
 export interface IEndsWith {
   endsWith: string;
@@ -25,4 +25,13 @@ const endsWithSchema = new Schema<IEndsWith>(
   { collection: "endsWith" }
 );
 
-export const EndsWith = model("endsWith", endsWithSchema);
+export class EndsWith {
+  private static model: Model<IEndsWith> = model<IEndsWith>(
+    "endsWith",
+    endsWithSchema
+  );
+
+  public static getModel(): Model<IEndsWith> {
+    return this.model;
+  }
+}

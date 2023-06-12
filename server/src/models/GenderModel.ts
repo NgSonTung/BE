@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 
 export interface IGender {
   gender: string;
@@ -25,4 +25,10 @@ const genderSchema = new Schema<IGender>(
   { collection: "gender" }
 );
 
-export const Gender = model("gender", genderSchema);
+export class Gender {
+  private static model: Model<IGender> = model<IGender>("gender", genderSchema);
+
+  public static getModel(): Model<IGender> {
+    return this.model;
+  }
+}

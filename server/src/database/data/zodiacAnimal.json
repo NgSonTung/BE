@@ -1,72 +1,110 @@
-[{
-  "_id": {
-    "$oid": "647f486270b47d535c175594"
+[
+  {
+    "_id": "647f486270b47d535c175594",
+    "zodiacAnimal": "Rat",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Rat"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c175595"
+  {
+    "_id": "647f486270b47d535c175595",
+    "zodiacAnimal": "Ox",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Ox"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c175596"
+  {
+    "_id": "647f486270b47d535c175596",
+    "zodiacAnimal": "Tiger",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Tiger"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c175597"
+  {
+    "_id": "647f486270b47d535c175597",
+    "zodiacAnimal": "Rabbit/Cat",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Rabbit/Cat"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c175598"
+  {
+    "_id": "647f486270b47d535c175598",
+    "zodiacAnimal": "Dragon",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Dragon"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c175599"
+  {
+    "_id": "647f486270b47d535c175599",
+    "zodiacAnimal": "Snake",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Snake"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c17559a"
+  {
+    "_id": "647f486270b47d535c17559a",
+    "zodiacAnimal": "Horse",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Horse"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c17559b"
+  {
+    "_id": "647f486270b47d535c17559b",
+    "zodiacAnimal": "Goat",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Goat"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c17559c"
+  {
+    "_id": "647f486270b47d535c17559c",
+    "zodiacAnimal": "Monkey",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Monkey"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c17559d"
+  {
+    "_id": "647f486270b47d535c17559d",
+    "zodiacAnimal": "Rooster",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Rooster"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c17559e"
+  {
+    "_id": "647f486270b47d535c17559e",
+    "zodiacAnimal": "Dog",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacAnimal": "Dog"
-},
-{
-  "_id": {
-    "$oid": "647f486270b47d535c17559f"
-  },
-  "zodiacAnimal": "Pig"
-}]
+  {
+    "_id": "647f486270b47d535c17559f",
+    "zodiacAnimal": "Pig",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
+  }
+]

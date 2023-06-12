@@ -1,8 +1,6 @@
 [
   {
-    "_id": {
-      "$oid": "648477eb03b8f070f7a7408a"
-    },
+    "_id": "648477eb03b8f070f7a7408a",
     "userName": "user",
     "authentication": {
       "password": "40c21b6cda426e042d700885b670a68813cfe07d05caf3575d505166ef4b7413",
@@ -10,13 +8,10 @@
     },
     "email": "user@neoprototype.ca",
     "token": 0,
-    "role": "0",
-    "__v": 0
+    "role": 0
   },
   {
-    "_id": {
-      "$oid": "6485c367a2c8d063be1436cd"
-    },
+    "_id": "6485c367a2c8d063be1436cd",
     "userName": "admin",
     "authentication": {
       "password": "789ed63910355bd4c9a3dee95303eee9c7e7f9288eaed29df2546413b2c6bd26",
@@ -24,7 +19,6 @@
     },
     "email": "admin@neoprototype.ca",
     "token": 0,
-    "role": 1,
-    "__v": 0
+    "role": 1
   }
 ]

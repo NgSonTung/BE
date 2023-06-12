@@ -1,92 +1,102 @@
 [
   {
-    "_id": { "$oid": "64809b16fc035d4872f184ba" },
+    "_id": "64809b16fc035d4872f184ba",
     "name": "Nguyễn Minh Anh",
     "description": "In the garden of love, Nguyễn Minh Anh blossoms like a radiant star, illuminating the path of eternal romance.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c175529" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c17555b" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c17554a" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c175529",
+    "middleNameId": ["647f3d5370b47d535c17555b"],
+    "lastNameId": "647f3d3370b47d535c17554a"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184bb" },
+    "_id": "64809b16fc035d4872f184bb",
     "name": "Trần Thị Bảo",
     "description": "Trần Thị Bảo, a gentle breeze that caresses the heart, carrying the essence of love's tender embrace.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c17552a" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c17555c" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c17554b" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c17552a",
+    "middleNameId": ["647f3d5370b47d535c17555c"],
+    "lastNameId": "647f3d3370b47d535c17554b"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184bc" },
+    "_id": "64809b16fc035d4872f184bc",
     "name": "Lê Đức Chinh",
     "description": "In the symphony of passion, Lê Đức Chinh's name resonates, composing melodies of love that dance in the souls of kindred hearts.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c17552b" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c17555d" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c17554c" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c17552b",
+    "middleNameId": ["647f3d5370b47d535c17555d"],
+    "lastNameId": "647f3d3370b47d535c17554c"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184bd" },
+    "_id": "64809b16fc035d4872f184bd",
     "name": "Phạm Ngọc Dũng",
     "description": "Phạm Ngọc Dũng, a precious gem sparkling in the moonlight, a symbol of enduring love and unwavering devotion.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c17552c" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c17555e" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c17554d" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c17552c",
+    "middleNameId": ["647f3d5370b47d535c17555e"],
+    "lastNameId": "647f3d3370b47d535c17554d"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184be" },
+    "_id": "64809b16fc035d4872f184be",
     "name": "Huỳnh Hòa Giang",
     "description": "Like a painting of romance, Huỳnh Hòa Giang's name weaves colors of passion and serenity, enchanting all who behold it.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c17552e" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c17555f" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c17554e" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c17552e",
+    "middleNameId": ["647f3d5370b47d535c17555f"],
+    "lastNameId": "647f3d3370b47d535c17554e"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184bf" },
+    "_id": "64809b16fc035d4872f184bf",
     "name": "Hoàng Tuấn Hải",
     "description": "In the ocean of love, Hoàng Tuấn Hải emerges as a radiant sun, guiding hearts through storms to the shores of eternal bliss.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c17552e" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c175560" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c17554f" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c17552e",
+    "middleNameId": ["647f3d5370b47d535c175560"],
+    "lastNameId": "647f3d3370b47d535c17554f"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184c0" },
+    "_id": "64809b16fc035d4872f184c0",
     "name": "Phan Thảo Lan",
     "description": "Phan Thảo Lan, a delicate flower blooming in the meadow of dreams, spreading the fragrance of love with every petal's touch.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c17552f" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c175561" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c175550" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c17552f",
+    "middleNameId": ["647f3d5370b47d535c175561"],
+    "lastNameId": "647f3d3370b47d535c175550"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184c1" },
+    "_id": "64809b16fc035d4872f184c1",
     "name": "Vũ Vân Minh",
     "description": "Vũ Vân Minh, a celestial melody that whispers in the night, evoking emotions of love that soar among the stars.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c175530" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c175562" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c175551" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c175530",
+    "middleNameId": ["647f3d5370b47d535c175562"],
+    "lastNameId": "647f3d3370b47d535c175551"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184c2" },
+    "_id": "64809b16fc035d4872f184c2",
     "name": "Đặng Nhật Nga",
     "description": "With grace and beauty, Đặng Nhật Nga illuminates the sky of love like a radiant moon, casting its enchanting spell on hearts.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c175531" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c175563" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c175552" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c175531",
+    "middleNameId": ["647f3d5370b47d535c175563"],
+    "lastNameId": "647f3d3370b47d535c175552"
   },
   {
-    "_id": { "$oid": "64809b16fc035d4872f184c3" },
+    "_id": "64809b16fc035d4872f184c3",
     "name": "Bùi Phương Quang",
     "description": "Bùi Phương Quang, a constellation of love shining brightly in the heavens, guiding souls on a journey of everlasting affection.",
-    "typeId": { "$oid": "647f454f70b47d535c175583" },
-    "firstNameId": { "$oid": "647f3c7b70b47d535c175533" },
-    "middleNameId": [{ "$oid": "647f3d5370b47d535c175564" }],
-    "lastNameId": { "$oid": "647f3d3370b47d535c175553" }
+    "typeId": "647f454f70b47d535c175583",
+    "categoryId": "647f3c5170b47d535c175518",
+    "firstNameId": "647f3c7b70b47d535c175533",
+    "middleNameId": ["647f3d5370b47d535c175564"],
+    "lastNameId": "647f3d3370b47d535c175553"
   }
 ]

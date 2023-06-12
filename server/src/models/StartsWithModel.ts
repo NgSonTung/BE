@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 
 export interface IStartsWith {
   startsWith: string;
@@ -25,4 +25,13 @@ const startsWithSchema = new Schema<IStartsWith>(
   { collection: "startsWith" }
 );
 
-export const StartsWith = model("startsWith", startsWithSchema);
+export class StartsWith {
+  private static model: Model<IStartsWith> = model<IStartsWith>(
+    "startsWith",
+    startsWithSchema
+  );
+
+  public static getModel(): Model<IStartsWith> {
+    return this.model;
+  }
+}

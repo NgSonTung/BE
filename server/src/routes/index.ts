@@ -1,135 +1,30 @@
 import { isAuthenticated, isAdmin } from "./../middlewares/index";
 import express, { Request, Response, Router } from "express";
-import { login, register } from "../controllers/authenticationController";
+import { Controller } from "./../controllers/index";
 import {
-  addType,
-  deleteAllTypes,
-  deleteTypeById,
-  getAllTypes,
-  getTypeById,
-  updateTypeById,
-} from "../controllers/typeController";
-import {
-  addCategory,
-  deleteAllCategories,
-  deleteCategoryById,
-  getAllCategories,
-  getCategoryById,
-  updateCategoryById,
-} from "../controllers/categoryController";
-import {
-  addGender,
-  deleteAllGenders,
-  deleteGenderById,
-  getAllGenders,
-  getGenderById,
-  updateGenderById,
-} from "../controllers/genderController";
-import {
-  addFirstName,
-  deleteAllFirstNames,
-  deleteFirstNameById,
-  getAllFirstNames,
-  getFirstNameById,
-  updateFirstNameById,
-} from "../controllers/firstNameController";
-import {
-  addMiddleName,
-  deleteAllMiddleNames,
-  deleteMiddleNameById,
-  getAllMiddleNames,
-  getMiddleNameById,
-  updateMiddleNameById,
-} from "../controllers/middleNameController";
-import {
-  addLastName,
-  deleteAllLastNames,
-  deleteLastNameById,
-  getAllLastNames,
-  getLastNameById,
-  updateLastNameById,
-} from "../controllers/lastNameController";
-import {
-  addWordCount,
-  deleteAllWordCounts,
-  deleteWordCountById,
-  getAllWordCounts,
-  getWordCountById,
-  updateWordCountById,
-} from "../controllers/wordCountController";
-import {
-  addName,
-  deleteAllNames,
-  deleteNameById,
-  getAllNames,
-  getNameById,
-  updateNameById,
-} from "../controllers/nameController";
-import {
-  addEthnicity,
-  deleteAllEthnicities,
-  deleteEthnicityById,
-  getAllEthnicities,
-  getEthnicityById,
-  updateEthnicityById,
-} from "../controllers/ethnicityController";
-import {
-  addMeaning,
-  deleteAllMeanings,
-  deleteMeaningById,
-  getAllMeanings,
-  getMeaningById,
-  updateMeaningById,
-} from "../controllers/meaningController";
-import {
-  addUser,
-  deleteAllUsers,
-  deleteUserById,
-  getAllUsers,
-  getUserById,
-  updateUserById,
-} from "../controllers/userController";
-import {
-  addZodiacSign,
-  deleteAllZodiacSigns,
-  deleteZodiacSignById,
-  getAllZodiacSigns,
-  getZodiacSignById,
-  updateZodiacSignById,
-} from "../controllers/zodiacSignController";
-import {
-  addZodiacAnimal,
-  deleteAllZodiacAnimals,
-  deleteZodiacAnimalById,
-  getAllZodiacAnimals,
-  getZodiacAnimalById,
-  updateZodiacAnimalById,
-} from "../controllers/zodiacAnimalController";
-import {
-  addElement,
-  deleteAllElements,
-  deleteElementById,
-  getAllElements,
-  getElementById,
-  updateElementById,
-} from "../controllers/elementController";
-import {
-  addStartsWith,
-  deleteAllStartsWiths,
-  deleteStartsWithById,
-  getAllStartsWiths,
-  getStartsWithById,
-  updateStartsWithById,
-} from "../controllers/startsWithController";
-import {
-  addEndsWith,
-  deleteAllEndsWiths,
-  deleteEndsWithById,
-  getAllEndsWiths,
-  getEndsWithById,
-  updateEndsWithById,
-} from "../controllers/endsWithController";
+  createUser,
+  login,
+  register,
+} from "../controllers/authenticationController";
 import { getAllCollections } from "../controllers/collectionController";
+import {
+  Type,
+  Category,
+  Gender,
+  FirstName,
+  MiddleName,
+  LastName,
+  WordCount,
+  Name,
+  Ethnicity,
+  Meaning,
+  User,
+  ZodiacSign,
+  ZodiacAnimal,
+  Element,
+  StartsWith,
+  EndsWith,
+} from "../models";
 
 const collectionRouter: Router = express.Router();
 
@@ -146,52 +41,54 @@ collectionRouter
         !res.headersSent && (await getAllCollections(req, res));
         break;
       case "type":
-        getAllTypes(req, res);
+        Controller.getAll(Type, req, res);
         break;
       case "category":
-        getAllCategories(req, res);
+        Controller.getAll(Category, req, res);
         break;
       case "gender":
-        getAllGenders(req, res);
+        Controller.getAll(Gender, req, res);
         break;
       case "firstName":
-        getAllFirstNames(req, res);
+        Controller.getAll(FirstName, req, res);
         break;
       case "middleName":
-        getAllMiddleNames(req, res);
+        Controller.getAll(MiddleName, req, res);
         break;
       case "lastName":
-        getAllLastNames(req, res);
+        Controller.getAll(LastName, req, res);
         break;
       case "wordCount":
-        getAllWordCounts(req, res);
+        Controller.getAll(WordCount, req, res);
         break;
       case "name":
-        getAllNames(req, res);
+        Controller.getAll(Name, req, res);
         break;
       case "ethnicity":
-        getAllEthnicities(req, res);
+        Controller.getAll(Ethnicity, req, res);
         break;
       case "meaning":
-        getAllMeanings(req, res);
+        Controller.getAll(Meaning, req, res);
         break;
       case "user":
-        getAllUsers(req, res);
+        await isAuthenticated(req, res);
+        !res.headersSent && (await isAdmin(req, res));
+        !res.headersSent && (await Controller.getAll(User, req, res));
         break;
       case "zodiacSign":
-        getAllZodiacSigns(req, res);
+        Controller.getAll(ZodiacSign, req, res);
         break;
       case "zodiacAnimal":
-        getAllZodiacAnimals(req, res);
+        Controller.getAll(ZodiacAnimal, req, res);
         break;
       case "element":
-        getAllElements(req, res);
+        Controller.getAll(Element, req, res);
         break;
       case "startsWith":
-        getAllStartsWiths(req, res);
+        Controller.getAll(StartsWith, req, res);
         break;
       case "endsWith":
-        getAllEndsWiths(req, res);
+        Controller.getAll(EndsWith, req, res);
         break;
     }
   })
@@ -199,222 +96,193 @@ collectionRouter
     const { collectionName } = req.params;
     switch (collectionName) {
       case "type":
-        getTypeById(req, res);
+        Controller.getById(Type, req, res);
         break;
       case "category":
-        getCategoryById(req, res);
+        Controller.getById(Category, req, res);
         break;
       case "gender":
-        getGenderById(req, res);
+        Controller.getById(Gender, req, res);
         break;
       case "firstName":
-        getFirstNameById(req, res);
+        Controller.getById(FirstName, req, res);
         break;
       case "middleName":
-        getMiddleNameById(req, res);
+        Controller.getById(MiddleName, req, res);
         break;
       case "lastName":
-        getLastNameById(req, res);
+        Controller.getById(LastName, req, res);
         break;
       case "wordCount":
-        getWordCountById(req, res);
+        Controller.getById(WordCount, req, res);
         break;
       case "name":
-        getNameById(req, res);
+        Controller.getById(Name, req, res);
         break;
       case "ethnicity":
-        getEthnicityById(req, res);
+        Controller.getById(Ethnicity, req, res);
         break;
       case "meaning":
-        getMeaningById(req, res);
-        break;
-      case "user":
-        getUserById(req, res);
-        break;
-      case "zodiacSign":
-        getZodiacSignById(req, res);
-        break;
-      case "zodiacAnimal":
-        getZodiacAnimalById(req, res);
-        break;
-      case "element":
-        getElementById(req, res);
-        break;
-      case "startsWith":
-        getStartsWithById(req, res);
-        break;
-      case "endsWith":
-        getEndsWithById(req, res);
-        break;
-    }
-  })
-  .delete("/:collectionName", async (req: Request, res: Response) => {
-    const { collectionName } = req.params;
-    switch (collectionName) {
-      case "type":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllTypes(req, res);
-        break;
-      case "category":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllCategories(req, res);
-        break;
-      case "gender":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllGenders(req, res);
-        break;
-      case "firstName":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllFirstNames(req, res);
-        break;
-      case "middleName":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllMiddleNames(req, res);
-        break;
-      case "lastName":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllLastNames(req, res);
-        break;
-      case "wordCount":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllWordCounts(req, res);
-        break;
-      case "name":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllNames(req, res);
-        break;
-      case "ethnicity":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllEthnicities(req, res);
-        break;
-      case "meaning":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllMeanings(req, res);
+        Controller.getById(Meaning, req, res);
         break;
       case "user":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllUsers(req, res);
+        !res.headersSent && (await Controller.getById(User, req, res));
         break;
       case "zodiacSign":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllZodiacSigns(req, res);
+        Controller.getById(ZodiacSign, req, res);
         break;
       case "zodiacAnimal":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllZodiacAnimals(req, res);
+        Controller.getById(ZodiacAnimal, req, res);
         break;
       case "element":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllElements(req, res);
+        Controller.getById(Element, req, res);
         break;
       case "startsWith":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllStartsWiths(req, res);
+        Controller.getById(StartsWith, req, res);
         break;
       case "endsWith":
-        await isAuthenticated(req, res);
-        !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteAllEndsWiths(req, res);
+        Controller.getById(EndsWith, req, res);
         break;
     }
   })
+  // .delete("/:collectionName", async (req: Request, res: Response) => {
+  //   const { collectionName } = req.params;
+  //   switch (collectionName) {
+  //     case "type":
+  //       Controller.deleteAll(Type, req, res);
+  //       break;
+  //     case "category":
+  //       Controller.deleteAll(Category, req, res);
+  //       break;
+  //     case "gender":
+  //       Controller.deleteAll(Gender, req, res);
+  //       break;
+  //     case "firstName":
+  //       Controller.deleteAll(FirstName, req, res);
+  //       break;
+  //     case "middleName":
+  //       Controller.deleteAll(MiddleName, req, res);
+  //       break;
+  //     case "lastName":
+  //       Controller.deleteAll(LastName, req, res);
+  //       break;
+  //     case "wordCount":
+  //       Controller.deleteAll(WordCount, req, res);
+  //       break;
+  //     case "name":
+  //       Controller.deleteAll(Name, req, res);
+  //       break;
+  //     case "ethnicity":
+  //       Controller.deleteAll(Ethnicity, req, res);
+  //       break;
+  //     case "meaning":
+  //       Controller.deleteAll(Meaning, req, res);
+  //       break;
+  //     case "user":
+  //       Controller.deleteAll(User, req, res);
+  //       break;
+  //     case "zodiacSign":
+  //       Controller.deleteAll(ZodiacSign, req, res);
+  //       break;
+  //     case "zodiacAnimal":
+  //       Controller.deleteAll(ZodiacAnimal, req, res);
+  //       break;
+  //     case "element":
+  //       Controller.deleteAll(Element, req, res);
+  //       break;
+  //     case "startsWith":
+  //       Controller.deleteAll(StartsWith, req, res);
+  //       break;
+  //     case "endsWith":
+  //       Controller.deleteAll(EndsWith, req, res);
+  //       break;
+  //   }
+  // })
   .delete("/:collectionName/:id", async (req: Request, res: Response) => {
     const { collectionName } = req.params;
     switch (collectionName) {
       case "type":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteTypeById(req, res);
+        !res.headersSent && (await Controller.deleteById(Type, req, res));
         break;
       case "category":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteCategoryById(req, res);
+        !res.headersSent && (await Controller.deleteById(Category, req, res));
         break;
       case "gender":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteGenderById(req, res);
+        !res.headersSent && (await Controller.deleteById(Gender, req, res));
         break;
       case "firstName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteFirstNameById(req, res);
+        !res.headersSent && (await Controller.deleteById(FirstName, req, res));
         break;
       case "middleName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteMiddleNameById(req, res);
+        !res.headersSent && (await Controller.deleteById(MiddleName, req, res));
         break;
       case "lastName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteLastNameById(req, res);
+        !res.headersSent && (await Controller.deleteById(LastName, req, res));
         break;
       case "wordCount":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteWordCountById(req, res);
+        !res.headersSent && (await Controller.deleteById(WordCount, req, res));
         break;
       case "name":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteNameById(req, res);
+        !res.headersSent && (await Controller.deleteById(Name, req, res));
         break;
       case "ethnicity":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteEthnicityById(req, res);
+        !res.headersSent && (await Controller.deleteById(Ethnicity, req, res));
         break;
       case "meaning":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteMeaningById(req, res);
+        !res.headersSent && (await Controller.deleteById(Meaning, req, res));
         break;
       case "user":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteUserById(req, res);
+        !res.headersSent && (await Controller.deleteById(User, req, res));
         break;
       case "zodiacSign":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteZodiacSignById(req, res);
+        !res.headersSent && (await Controller.deleteById(ZodiacSign, req, res));
         break;
       case "zodiacAnimal":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteZodiacAnimalById(req, res);
+        !res.headersSent &&
+          (await Controller.deleteById(ZodiacAnimal, req, res));
         break;
       case "element":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteElementById(req, res);
+        !res.headersSent && (await Controller.deleteById(Element, req, res));
         break;
       case "startsWith":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteStartsWithById(req, res);
+        !res.headersSent && (await Controller.deleteById(StartsWith, req, res));
         break;
       case "endsWith":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && deleteEndsWithById(req, res);
+        !res.headersSent && (await Controller.deleteById(EndsWith, req, res));
         break;
     }
   })
@@ -424,82 +292,82 @@ collectionRouter
       case "type":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addType(req, res);
+        !res.headersSent && (await Controller.create(Type, req, res));
         break;
       case "category":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addCategory(req, res);
+        !res.headersSent && (await Controller.create(Category, req, res));
         break;
       case "gender":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addGender(req, res);
+        !res.headersSent && (await Controller.create(Gender, req, res));
         break;
       case "firstName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addFirstName(req, res);
+        !res.headersSent && (await Controller.create(FirstName, req, res));
         break;
       case "middleName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addMiddleName(req, res);
+        !res.headersSent && (await Controller.create(MiddleName, req, res));
         break;
       case "lastName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addLastName(req, res);
+        !res.headersSent && (await Controller.create(LastName, req, res));
         break;
       case "wordCount":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addWordCount(req, res);
+        !res.headersSent && (await Controller.create(WordCount, req, res));
         break;
       case "name":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addName(req, res);
+        !res.headersSent && (await Controller.create(Name, req, res));
         break;
       case "ethnicity":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addEthnicity(req, res);
+        !res.headersSent && (await Controller.create(Ethnicity, req, res));
         break;
       case "meaning":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addMeaning(req, res);
+        !res.headersSent && (await Controller.create(Meaning, req, res));
         break;
       case "user":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addUser(req, res);
+        !res.headersSent && (await createUser(req, res));
         break;
       case "zodiacSign":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addZodiacSign(req, res);
+        !res.headersSent && (await Controller.create(ZodiacSign, req, res));
         break;
       case "zodiacAnimal":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addZodiacAnimal(req, res);
+        !res.headersSent && (await Controller.create(ZodiacAnimal, req, res));
         break;
       case "element":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addElement(req, res);
+        !res.headersSent && (await Controller.create(Element, req, res));
         break;
       case "startsWith":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addStartsWith(req, res);
+        !res.headersSent && (await Controller.create(StartsWith, req, res));
         break;
       case "endsWith":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && addEndsWith(req, res);
+        !res.headersSent && (await Controller.create(EndsWith, req, res));
         break;
     }
   })
@@ -509,82 +377,83 @@ collectionRouter
       case "type":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateTypeById(req, res);
+        !res.headersSent && (await Controller.updateById(Type, req, res));
         break;
       case "category":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateCategoryById(req, res);
+        !res.headersSent && (await Controller.updateById(Category, req, res));
         break;
       case "gender":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateGenderById(req, res);
+        !res.headersSent && (await Controller.updateById(Gender, req, res));
         break;
       case "firstName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateFirstNameById(req, res);
+        !res.headersSent && (await Controller.updateById(FirstName, req, res));
         break;
       case "middleName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateMiddleNameById(req, res);
+        !res.headersSent && (await Controller.updateById(MiddleName, req, res));
         break;
       case "lastName":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateLastNameById(req, res);
+        !res.headersSent && (await Controller.updateById(LastName, req, res));
         break;
       case "wordCount":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateWordCountById(req, res);
+        !res.headersSent && (await Controller.updateById(WordCount, req, res));
         break;
       case "name":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateNameById(req, res);
+        !res.headersSent && (await Controller.updateById(Name, req, res));
         break;
       case "ethnicity":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateEthnicityById(req, res);
+        !res.headersSent && (await Controller.updateById(Ethnicity, req, res));
         break;
       case "meaning":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateMeaningById(req, res);
+        !res.headersSent && (await Controller.updateById(Meaning, req, res));
         break;
       case "user":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateUserById(req, res);
+        !res.headersSent && (await Controller.updateById(User, req, res));
         break;
       case "zodiacSign":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateZodiacSignById(req, res);
+        !res.headersSent && (await Controller.updateById(ZodiacSign, req, res));
         break;
       case "zodiacAnimal":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateZodiacAnimalById(req, res);
+        !res.headersSent &&
+          (await Controller.updateById(ZodiacAnimal, req, res));
         break;
       case "element":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateElementById(req, res);
+        !res.headersSent && (await Controller.updateById(Element, req, res));
         break;
       case "startsWith":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateStartsWithById(req, res);
+        !res.headersSent && (await Controller.updateById(StartsWith, req, res));
         break;
       case "endsWith":
         await isAuthenticated(req, res);
         !res.headersSent && (await isAdmin(req, res));
-        !res.headersSent && updateEndsWithById(req, res);
+        !res.headersSent && (await Controller.updateById(EndsWith, req, res));
         break;
     }
   });

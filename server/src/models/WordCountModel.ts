@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 
 export interface IWordCount {
   wordCount: string;
@@ -25,4 +25,13 @@ const wordCountSchema = new Schema<IWordCount>(
   { collection: "wordCount" }
 );
 
-export const WordCount = model("wordCount", wordCountSchema);
+export class WordCount {
+  private static model: Model<IWordCount> = model<IWordCount>(
+    "wordCount",
+    wordCountSchema
+  );
+
+  public static getModel(): Model<IWordCount> {
+    return this.model;
+  }
+}

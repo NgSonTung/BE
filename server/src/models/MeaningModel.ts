@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 
 export interface IMeaning {
   meaning: string;
@@ -25,4 +25,13 @@ const meaningSchema = new Schema<IMeaning>(
   { collection: "meaning" }
 );
 
-export const Meaning = model("meaning", meaningSchema);
+export class Meaning {
+  private static model: Model<IMeaning> = model<IMeaning>(
+    "meaning",
+    meaningSchema
+  );
+
+  public static getModel(): Model<IMeaning> {
+    return this.model;
+  }
+}

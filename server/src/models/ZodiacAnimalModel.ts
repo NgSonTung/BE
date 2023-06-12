@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 
 export interface IZodiacAnimal {
   zodiacAnimal: string;
@@ -25,4 +25,13 @@ const zodiacAnimalSchema = new Schema<IZodiacAnimal>(
   { collection: "zodiacAnimal" }
 );
 
-export const ZodiacAnimal = model("zodiacAnimal", zodiacAnimalSchema);
+export class ZodiacAnimal {
+  private static model: Model<IZodiacAnimal> = model<IZodiacAnimal>(
+    "zodiacAnimal",
+    zodiacAnimalSchema
+  );
+
+  public static getModel(): Model<IZodiacAnimal> {
+    return this.model;
+  }
+}

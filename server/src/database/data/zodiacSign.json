@@ -1,72 +1,110 @@
-[{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a3"
+[
+  {
+    "_id": "647f495670b47d535c1755a3",
+    "zodiacSign": "Aries",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Aries"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a4"
+  {
+    "_id": "647f495670b47d535c1755a4",
+    "zodiacSign": "Taurus",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Taurus"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a5"
+  {
+    "_id": "647f495670b47d535c1755a5",
+    "zodiacSign": "Gemini",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Gemini"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a6"
+  {
+    "_id": "647f495670b47d535c1755a6",
+    "zodiacSign": "Cancer",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Cancer"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a7"
+  {
+    "_id": "647f495670b47d535c1755a7",
+    "zodiacSign": "Leo",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Leo"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a8"
+  {
+    "_id": "647f495670b47d535c1755a8",
+    "zodiacSign": "Virgo",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Virgo"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755a9"
+  {
+    "_id": "647f495670b47d535c1755a9",
+    "zodiacSign": "Libra",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Libra"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755aa"
+  {
+    "_id": "647f495670b47d535c1755aa",
+    "zodiacSign": "Scorpio",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Scorpio"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755ab"
+  {
+    "_id": "647f495670b47d535c1755ab",
+    "zodiacSign": "Sagittarius",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Sagittarius"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755ac"
+  {
+    "_id": "647f495670b47d535c1755ac",
+    "zodiacSign": "Capricorn",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Capricorn"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755ad"
+  {
+    "_id": "647f495670b47d535c1755ad",
+    "zodiacSign": "Aquarius",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
   },
-  "zodiacSign": "Aquarius"
-},
-{
-  "_id": {
-    "$oid": "647f495670b47d535c1755ae"
-  },
-  "zodiacSign": "Pisces"
-}]
+  {
+    "_id": "647f495670b47d535c1755ae",
+    "zodiacSign": "Pisces",
+    "typeId": [
+      "647f454f70b47d535c175583",
+      "647f454f70b47d535c175585",
+      "647f454f70b47d535c175586"
+    ]
+  }
+]

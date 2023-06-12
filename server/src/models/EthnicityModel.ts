@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Schema, Types, model, Model } from "mongoose";
 
 export interface IEthnicity {
   ethnicity: string;
@@ -25,4 +25,13 @@ const ethnicitySchema = new Schema<IEthnicity>(
   { collection: "ethnicity" }
 );
 
-export const Ethnicity = model("ethnicity", ethnicitySchema);
+export class Ethnicity {
+  private static model: Model<IEthnicity> = model<IEthnicity>(
+    "ethnicity",
+    ethnicitySchema
+  );
+
+  public static getModel(): Model<IEthnicity> {
+    return this.model;
+  }
+}

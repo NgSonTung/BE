@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Model, Schema, Types, model } from "mongoose";
 
 export interface IMiddleName {
   middleName: string;
@@ -25,4 +25,13 @@ const middleNameSchema = new Schema<IMiddleName>(
   { collection: "middleName" }
 );
 
-export const MiddleName = model("middleName", middleNameSchema);
+export class MiddleName {
+  private static model: Model<IMiddleName> = model<IMiddleName>(
+    "middleName",
+    middleNameSchema
+  );
+
+  public static getModel(): Model<IMiddleName> {
+    return this.model;
+  }
+}

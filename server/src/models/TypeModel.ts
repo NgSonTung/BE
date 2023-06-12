@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Model, Schema, model } from "mongoose";
 
 export interface IType {
   type: string;
@@ -11,4 +11,10 @@ const typeSchema = new Schema<IType>(
   { collection: "type" }
 );
 
-export const Type = model("type", typeSchema);
+export class Type {
+  private static model: Model<IType> = model<IType>("type", typeSchema);
+
+  public static getModel(): Model<IType> {
+    return this.model;
+  }
+}

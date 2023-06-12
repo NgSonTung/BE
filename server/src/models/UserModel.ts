@@ -1,4 +1,4 @@
-import { Schema, model } from "mongoose";
+import { Model, Schema, model } from "mongoose";
 
 export interface IUser {
   userName: string;
@@ -48,4 +48,10 @@ const userSchema = new Schema<IUser>(
   { collection: "user" }
 );
 
-export const User = model("user", userSchema);
+export class User {
+  private static model: Model<IUser> = model<IUser>("user", userSchema);
+
+  public static getModel(): Model<IUser> {
+    return this.model;
+  }
+}

@@ -1,17 +1,77 @@
 [
-  { "_id": { "$oid": "647f3c7b70b47d535c175529" }, "firstName": "Anh" },
-  { "_id": { "$oid": "647f3c7b70b47d535c17552a" }, "firstName": "Bảo" },
-  { "_id": { "$oid": "647f3c7b70b47d535c17552b" }, "firstName": "Chinh" },
-  { "_id": { "$oid": "647f3c7b70b47d535c17552c" }, "firstName": "Dũng" },
-  { "_id": { "$oid": "64809b16fc035d4872f184be" }, "firstName": "Giang" },
-  { "_id": { "$oid": "647f3c7b70b47d535c17552e" }, "firstName": "Hải" },
-  { "_id": { "$oid": "647f3c7b70b47d535c17552f" }, "firstName": "Lan" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175530" }, "firstName": "Minh" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175531" }, "firstName": "Nga" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175532" }, "firstName": "Phương" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175533" }, "firstName": "Quang" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175534" }, "firstName": "Thu" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175535" }, "firstName": "Tuấn" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175536" }, "firstName": "Vân" },
-  { "_id": { "$oid": "647f3c7b70b47d535c175537" }, "firstName": "Xuân" }
+  {
+    "_id": "647f3c7b70b47d535c175529",
+    "firstName": "Anh",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c17552a",
+    "firstName": "Bảo",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c17552b",
+    "firstName": "Chinh",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c17552c",
+    "firstName": "Dũng",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "64809b16fc035d4872f184be",
+    "firstName": "Giang",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c17552e",
+    "firstName": "Hải",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c17552f",
+    "firstName": "Lan",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175530",
+    "firstName": "Minh",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175531",
+    "firstName": "Nga",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175532",
+    "firstName": "Phương",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175533",
+    "firstName": "Quang",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175534",
+    "firstName": "Thu",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175535",
+    "firstName": "Tuấn",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175536",
+    "firstName": "Vân",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  },
+  {
+    "_id": "647f3c7b70b47d535c175537",
+    "firstName": "Xuân",
+    "typeId": ["647f454f70b47d535c175583", "647f454f70b47d535c175586"]
+  }
 ]

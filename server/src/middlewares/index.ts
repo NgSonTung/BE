@@ -7,6 +7,7 @@ export const isAdmin = async (req: Request, res: Response) => {
   dotenv.config({
     path: "./config.env",
   });
+
   const ADMIN = process.env.ADMIN;
   try {
     const role = get(req, "identity.role")! as string;
@@ -42,7 +43,7 @@ export const isAuthenticated = async (req: Request, res: Response) => {
       });
     }
 
-    const existingUser = await User.findOne({
+    const existingUser = await User.getModel().findOne({
       "authentication.sessionToken": sessionToken,
     });
     if (!existingUser) {

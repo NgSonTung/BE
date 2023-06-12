@@ -1,4 +1,4 @@
-import { Schema, Types, model } from "mongoose";
+import { Schema, Types, model, Model } from "mongoose";
 
 export interface IElement {
   element: string;
@@ -25,4 +25,13 @@ const elementSchema = new Schema<IElement>(
   { collection: "element" }
 );
 
-export const Element = model("element", elementSchema);
+export class Element {
+  private static model: Model<IElement> = model<IElement>(
+    "element",
+    elementSchema
+  );
+
+  public static getModel(): Model<IElement> {
+    return this.model;
+  }
+}
